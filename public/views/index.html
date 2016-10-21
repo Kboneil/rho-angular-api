@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Star Wars</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="scripts/module.js"></script>
+    <script src="scripts/main.controller.js"></script>
+    <script src="scripts/swapi.service.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body ng-app="starWarsApp" ng-controller="MainController as main">
+      <div id="makeChoice">
+        <label>Choose a movie:</label>
+        <select ng-model="main.selected" ng-change="main.getFilmData()" ng-change="main.changeClass()">
+          <option ng-repeat="film in main.films" ng-value="film.url">{{film.title}}</option>
+        </select>
+      </div>
+    <main>
+      <div id="introWords">
+        <h1>A long time ago, in a galaxy</h1>
+        <h1>far, far away....</h1>
+      </div>
+      <audio ng-src="{{main.song}}" autoplay></audio>
+      <img id="show" ng-class="main.show" ng-src="{{main.image}}"/>
+      <div ng-class="main.crawl">
+        <div ng-class="main.paragraphs">
+          <div id="words">
+              <h3>{{main.episode}}</h3>
+              <h2>{{main.title}}</h2>
+              <p ng-repeat="line in main.lines track by $index">{{line}}</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
