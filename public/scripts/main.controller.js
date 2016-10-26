@@ -42,6 +42,12 @@ function MainController(swapi) {
     setTimeout(function () {
       document.getElementById('makeChoice').style.display = '';
       document.getElementById('introWords').style.display = '';
+      document.getElementById('words').style.display = 'none';
+      main.show = null;
+      main.crawl = null;
+      main.paragraphs = null;
+      main.image = null;
+      main.song = null;
     }, 60000);
 
   };
