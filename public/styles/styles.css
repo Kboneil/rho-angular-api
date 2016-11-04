@@ -32,12 +32,13 @@ body {
 }
 
 #introWords{
-  margin:28%;
-  margin-top: 10%;
+  margin: 20% auto;
+  width: 600px;
 }
 
+
 h1 {
-  text-align: left;
+  text-align: justify;
   color: lightblue;
   font-size: 300%;
 }
@@ -60,14 +61,12 @@ label {
 }
 
 @keyframes scroll {
-	0% { top: 118%; }
+	0% { top: 120%; }
 	100% { top: -170%; }
 }
 
 .crawl {
 	position: absolute;
-  letter-spacing: 10px;
-  word-spacing: 8px;
 	width: 100%;
 	height: 50em;
 	bottom: 0;

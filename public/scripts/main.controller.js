@@ -30,7 +30,7 @@ function MainController(swapi) {
     setTimeout(function () {
       console.log('hidden');
       document.getElementById('show').style.display = 'none';
-    }, 9850);
+    }, 10800);
 
     swapi.getFilmData(main.selected).then(function (film) {
       main.lines = film.opening_crawl.split('\r\n\r\n');
@@ -40,8 +40,6 @@ function MainController(swapi) {
     });
 
     setTimeout(function () {
-      document.getElementById('makeChoice').style.display = '';
-      document.getElementById('introWords').style.display = '';
       document.getElementById('words').style.display = 'none';
       main.show = null;
       main.crawl = null;
